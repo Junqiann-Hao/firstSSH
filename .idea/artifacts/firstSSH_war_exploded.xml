@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="firstSSH:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/firstSSH_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="firstSSH/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="firstSSH" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="Hibernate 3.6.10-3.6.10" />
+          <element id="library" level="application" name="lib" />
+          <element id="library" level="module" name="JUnit4" module-name="firstSSH" />
+          <element id="library" level="application" name="Spring-3.2.17.RELEASE" />
+          <element id="library" level="application" name="Struts 2-2.3.20.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

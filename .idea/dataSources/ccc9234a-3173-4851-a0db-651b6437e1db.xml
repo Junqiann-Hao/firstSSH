@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hib_demo@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hib_demo">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="test"/>
+    <table id="7" parent="2" name="t_dept"/>
+    <table id="8" parent="2" name="t_employee"/>
+    <column id="9" parent="7" name="deptId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="10" parent="7" name="deptName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="11" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>deptId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="12" parent="8" name="empId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="13" parent="8" name="empName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="14" parent="8" name="salary">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="15" parent="8" name="dept_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="16" parent="8" name="FKFDCF5A19AE0AF65E">
+      <ColNames>dept_id</ColNames>
+    </index>
+    <key id="17" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>empId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="18" parent="8" name="FKFDCF5A19AE0AF65E">
+      <ColNames>dept_id</ColNames>
+      <RefSchemaName>hib_demo</RefSchemaName>
+      <RefTableName>t_dept</RefTableName>
+      <RefColNames>deptId</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
